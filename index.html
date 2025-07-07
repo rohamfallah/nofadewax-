@@ -1,70 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Story of NoFade Wax</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoFade Wax – Grip Strong. Color Stay.</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #fff;
+      background-color: #f7f7f7;
       color: #333;
     }
     header {
       background-color: #111;
-      color: white;
+      color: #fff;
       padding: 40px 20px;
       text-align: center;
+    }
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 32px;
     }
     section {
       padding: 40px 20px;
       max-width: 800px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 32px;
+      margin: 0 auto;
     }
     h2 {
+      color: #000;
       font-size: 24px;
-      margin-top: 40px;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    a.button {
+    .button {
       display: inline-block;
-      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .story-button {
       background-color: #007BFF;
       color: white;
-      padding: 12px 24px;
-      text-decoration: none;
+      padding: 10px 20px;
+      border: none;
       border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .features {
+      background-color: #e0f7f3;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .features ul {
+      padding-left: 20px;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Our Story</h1>
-    <p>How NoFade Wax was born in the heart of Dubai</p>
+    <h1>NoFade Wax</h1>
+    <p>Grip Strong. Color Stay.</p>
   </header>
 
   <section>
-    <h2>Made for Riders, by a Rider</h2>
-    <p>NoFade Wax was created by a young FlowRider enthusiast who noticed a problem: the wax he used gave good grip but left stains, marks, and faded patches on his beautiful board. It was frustrating. So he decided to fix it.</p>
-
-    <p>After experimenting with ingredients, testing at Wild Wadi Dubai every week, and improving the formula — NoFade Wax was born. A wax that grips strong but never ruins the board’s color. And the best part? It’s made right here in Dubai.</p>
-
-    <h2>Built on Passion</h2>
-    <p>This business isn’t run by a big company — it’s powered by creativity, action, and the love for riding waves. Each bar is handmade, packed carefully, and tested by real riders to make sure it works every time.</p>
-
-    <p>Whether you ride for fun or you're chasing tricks, NoFade Wax is here to help you grip better and ride smarter.</p>
-
-    <a class="button" href="index.html">⬅ Back to Homepage</a>
+    <h2>What is NoFade Wax?</h2>
+    <p>NoFade Wax is specially made for FlowRider boards. It gives you amazing grip without damaging the color of your board. Tested every week at Wild Wadi Dubai!</p>
+    <a class="story-button" href="story.html">Read Our Story</a>
   </section>
+
+  <section class="features">
+    <h2>Why Riders Love It</h2>
+    <ul>
+      <li>✔️ Strong grip even on slick or glossy boards</li>
+      <li>✔️ Doesn’t discolor your board</li>
+      <li>✔️ Waterproof & heat-resistant formula</li>
+      <li>✔️ Tested by real FlowRider users in Dubai</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Wax Details</h2>
+    <p><strong>Each bar contains approximately 80 grams of NoFade Wax</strong> and costs <strong>45 AED</strong>. Comes in waterproof packaging.</p>
+  </section>
+
+  <section>
+    <h2>Want to Buy?</h2>
+    <p>Enter your info below. We'll email you with details and how to order:</p>
+    <form action="mailto:fallah.roham@yahoo.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="4" placeholder="Your message (board type, delivery notes, etc)"></textarea>
+      <button type="submit">Register & Contact Me</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:fallah.roham@yahoo.com">fallah.roham@yahoo.com</a></p>
+    <p>Order on WhatsApp:</p>
+    <a class="button" href="https://wa.me/971502677438?text=Hi%20I%20want%20to%20order%20NoFade%20Wax">Message on WhatsApp</a>
+  </section>
+
+  <footer>
+    © 2025 NoFade Wax | Follow us on TikTok @nofadewax
+  </footer>
 
 </body>
 </html>
+
 
