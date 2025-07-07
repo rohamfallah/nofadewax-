@@ -1,146 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NoFade Wax – Grip Strong. Color Stay.</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f8f8f8;
+      background-color: #f7f7f7;
       color: #333;
-      background-image: url('https://rohamfallah.github.io/nofade-wax/logo.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 400px;
     }
     header {
-      background: rgba(0, 0, 0, 0.85);
-      color: white;
+      background-color: #111;
+      color: #fff;
       padding: 40px 20px;
       text-align: center;
     }
     header img {
-      max-width: 120px;
-      margin-bottom: 10px;
+      display: none; /* Hide the logo image */
     }
     header h1 {
-      margin: 10px 0 0 0;
-      font-size: 2.8rem;
+      margin: 10px 0 0;
+      font-size: 32px;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: #0077b6;
-      color: white;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
+    section {
       padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .section {
-      margin-bottom: 40px;
+    h2 {
+      color: #000;
+      font-size: 24px;
     }
-    .section h2 {
-      color: #0077b6;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .feature {
-      flex: 1;
-      min-width: 220px;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .btn {
-      background: #0077b6;
-      color: white;
-      padding: 14px 28px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
+    .button {
       display: inline-block;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
       margin-top: 20px;
     }
-    .btn:visited {
-      color: white;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
     footer {
-      background: #111;
-      color: #aaa;
+      background: #eee;
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://rohamfallah.github.io/nofade-wax/logo.png" alt="NoFade Wax Logo">
     <h1>NoFade Wax</h1>
-    <p>Grip Strong. Color Stay. Never Fade.</p>
+    <p>Grip Strong. Color Stay.</p>
   </header>
 
-  <section class="hero">
-    <h2>Premium Wax for FlowRider Boards</h2>
-    <p>Built by Riders, for Riders – Color-Safe Grip for Every Session.</p>
-    <a href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" class="btn" target="_blank">I Want to Buy</a>
+  <section>
+    <h2>What is NoFade Wax?</h2>
+    <p>NoFade Wax is specially made for FlowRider boards. It gives you amazing grip without damaging the color of your board. Tested every week at Wild Wadi Dubai!</p>
   </section>
 
-  <div class="container">
-    <section class="section">
-      <h2>Our Story</h2>
-      <p>NoFade Wax started in Dubai when Roham – a FlowRider rider – got tired of his board losing its color after waxing. So he created his own wax: long-lasting, color-safe, and built for real heat and real waves. Handmade in the UAE and tested in Wild Wadi every week.</p>
-    </section>
+  <section>
+    <h2>Price</h2>
+    <p><strong>Only 45 AED per bar</strong>. Comes in waterproof packaging.</p>
+  </section>
 
-    <section class="section">
-      <h2>Why Choose NoFade Wax?</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>🔥 Heat-Resistant</h3>
-          <p>Stays strong in Dubai weather – no melting mess.</p>
-        </div>
-        <div class="feature">
-          <h3>🎨 Color-Safe</h3>
-          <p>Protects your board’s design – no white stains.</p>
-        </div>
-        <div class="feature">
-          <h3>🧲 Grippy Feel</h3>
-          <p>Stay confident on your board every ride.</p>
-        </div>
-        <div class="feature">
-          <h3>🇦🇪 Handmade in the UAE</h3>
-          <p>By real riders, for real boards. Local and proud.</p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Want to Buy?</h2>
+    <p>Enter your info below. We'll email you with details and how to order:</p>
+    <form action="mailto:fallah.roham@yahoo.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="4" placeholder="Your message (board type, delivery notes, etc)"></textarea>
+      <button type="submit">Register & Contact Me</button>
+    </form>
+  </section>
 
-    <section class="section">
-      <h2>Register Your Board</h2>
-      <p>Let us know your board type and message us directly.</p>
-      <a class="btn" href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" target="_blank">Send via WhatsApp</a>
-    </section>
-  </div>
+  <section>
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:fallah.roham@yahoo.com">fallah.roham@yahoo.com</a></p>
+    <p>Order on WhatsApp:</p>
+    <a class="button" href="https://wa.me/971502677438?text=Hi%20I%20want%20to%20order%20NoFade%20Wax">Message on WhatsApp</a>
+  </section>
 
   <footer>
-    Contact: <a href="mailto:fallah.roham@yahoo.com">fallah.roham@yahoo.com</a> |
-    TikTok: @NoFadeWax |
-    Discord: @nofadewax<br>
-    &copy; 2025 NoFade Wax. All rights reserved.
+    © 2025 NoFade Wax | Follow us on TikTok @nofadewax
   </footer>
 
 </body>
