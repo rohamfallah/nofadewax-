@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://formspree.io https://wa.me; style-src 'self' 'unsafe-inline';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NoFade Wax – Official Site</title>
   <style>
@@ -120,10 +121,11 @@
 
   <section>
     <h2>Register Your Board</h2>
-    <form action="mailto:fallah.roham@yahoo.com" method="POST" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Board type (Decking/Slick), delivery notes, etc"></textarea>
+    <p>Fill out this short form and we'll contact you directly:</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Board type (Decking/Slick), delivery notes, etc"></textarea>
       <button type="submit">Submit Registration</button>
     </form>
   </section>
