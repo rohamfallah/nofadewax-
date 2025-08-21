@@ -1,125 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://formspree.io https://wa.me; style-src 'self' 'unsafe-inline';">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoFade Wax – Official Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoFade Wax – Grip Strong. Color Stay.</title>
+  <meta name="description" content="NoFade Wax – premium color‑safe FlowRider & surf wax. Built by riders in the UAE. Strong grip. Heat resistant. Never fade." />
+  <meta name="theme-color" content="#0ea5e9" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+    :root {
+      --brand:#0ea5e9;        /* sky-500 */
+      --brand-dark:#0369a1;   /* sky-700 */
+      --ink:#0f172a;          /* slate-900 */
+      --muted:#64748b;        /* slate-500 */
+      --bg:#f8fafc;           /* slate-50 */
+      --card:#ffffff;
+      --ring:rgba(14,165,233,.25);
+      --radius:18px;
+      --shadow:0 10px 25px rgba(2, 132, 199,.15);
     }
-    header {
-      background-color: #0d0d0d;
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1100px;margin-inline:auto;padding:24px}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(255,255,255,.8);
+      border-bottom:1px solid rgba(2,6,23,.06);
     }
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-      font-weight: bold;
-    }
-    header p {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: #fff;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    h2 {
-      color: #111;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .button {
-      display: inline-block;
-      padding: 14px 28px;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      font-size: 16px;
-      margin-top: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-    }
-    footer a {
-      color: #25D366;
-      text-decoration: none;
-    }
+    .nav{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:44px;height:44px;border-radius:12px;object-fit:contain}
+    .nav a.btn{padding:10px 16px;border-radius:999px;background:var(--brand);color:white;text-decoration:none;box-shadow:var(--shadow)}
+
+    /* Hero */
+    .hero{isolation:isolate;position:relative;overflow:hidden;border-radius:0 0 var(--radius) var(--radius);}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:56px 24px}
+    .hero h1{font-size:clamp(28px,4.5vw,48px);line-height:1.05;margin:0 0 10px}
+    .hero p{color:var(--muted);font-size:clamp(16px,2.6vw,18px);max-width:60ch;margin:0}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{padding:14px 22px;border-radius:14px;border:none;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;box-shadow:var(--shadow)}
+    .btn.secondary{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+
+    .bubble{position:absolute;inset:auto -15% -30% auto;width:70vw;max-width:900px;aspect-ratio:1;border-radius:999px;
+      background:radial-gradient(60% 60% at 30% 30%, rgba(14,165,233,.5), transparent 60%),
+                 radial-gradient(40% 40% at 70% 60%, rgba(2,132,199,.35), transparent 60%);
+      filter:blur(30px);opacity:.7;pointer-events:none}
+
+    /* Sections */
+    section{padding:40px 24px}
+    h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 8px}
+    .muted{color:var(--muted)}
+
+    /* Cards */
+    .grid{display:grid;gap:18px}
+    @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border:1px solid rgba(2,6,23,.06)}
+    .card h3{margin:6px 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+
+    /* Product */
+    .product{display:grid;gap:22px;grid-template-columns:1fr}
+    @media(min-width:860px){.product{grid-template-columns:1.2fr .8fr;align-items:center}}
+    .product .shot{background:linear-gradient(135deg,#e6f6ff,#ffffff);border-radius:var(--radius);padding:18px;border:1px solid rgba(2,6,23,.06)}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;background:#e0f2fe;color:#075985;border-radius:999px;font-weight:700;font-size:14px}
+
+    /* Footer */
+    footer{background:#0b1220;color:#cbd5e1;margin-top:40px}
+    footer a{color:#e0f2fe}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:1fr}
+    @media(min-width:720px){.footer-grid{grid-template-columns:1.3fr .7fr}}
+
+    /* Utilities */
+    .qr{width:120px;height:120px;border-radius:12px;border:1px solid rgba(2,6,23,.06);}
   </style>
 </head>
 <body>
-
+  <!-- Header -->
   <header>
-    <h1>Welcome to the Official NoFade Wax Website</h1>
-    <p>Trusted FlowRider Wax – Built in Dubai for Riders Who Never Stop</p>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="https://rohamfallah.github.io/nofade-wax/logo.png" alt="NoFade Wax logo" onerror="this.style.display='none'">
+        <div>
+          <div style="font-size:18px;opacity:.8">NoFade</div>
+          <div style="margin-top:-4px;font-size:12px;color:var(--muted)">Grip Strong. Color Stay.</div>
+        </div>
+      </div>
+      <nav style="display:flex;gap:14px;align-items:center">
+        <a class="btn secondary" href="#shop">Shop</a>
+        <a class="btn" href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About NoFade Wax</h2>
-    <p><strong>NoFade Wax</strong> was proudly developed in <strong>Dubai</strong> by real riders who needed a wax that lasts longer, grips better, and never ruins your board. After months of testing, we perfected a powerful formula that works on both <strong>decking</strong> and <strong>slick</strong> boards – even under the hot Dubai sun.</p>
-    <ul>
-      <li>✔️ Strong grip on FlowRider surfaces</li>
-      <li>✔️ Doesn’t melt or fade off in warm water</li>
-      <li>✔️ Keeps board colors clean and sharp</li>
-      <li>✔️ Safe, natural ingredients</li>
-    </ul>
+  <!-- Hero -->
+  <div class="hero" style="background:linear-gradient(180deg,#0ea5e9,#0284c7);color:#fff">
+    <div class="wrap hero-inner">
+      <div>
+        <h1>Color‑Safe Wax for FlowRider & Surf</h1>
+        <p>Handmade in Dubai by riders, for riders. Heat‑resistant grip that won’t turn your board white. Tested weekly at Wild Wadi.</p>
+        <div class="cta">
+          <a class="btn" href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" target="_blank" rel="noopener">I Want to Buy</a>
+          <a class="btn secondary" href="#learn">Learn More</a>
+        </div>
+      </div>
+      <div class="shot">
+        <span class="pill">🇦🇪 Handmade in UAE</span>
+        <img src="https://rohamfallah.github.io/nofade-wax/logo.png" alt="NoFade Wax" style="margin-top:10px;max-width:320px;margin-inline:auto">
+      </div>
+    </div>
+    <div class="bubble"></div>
+  </div>
+
+  <!-- Why NoFade -->
+  <section id="learn" class="wrap">
+    <h2>Why riders choose NoFade</h2>
+    <p class="muted">Built to grip hard and keep your deck color bright — even in Dubai heat.</p>
+    <div class="grid" style="margin-top:16px">
+      <div class="card"><h3>🎨 Color‑Safe</h3><p>Won’t leave white stains or haze on your board art.</p></div>
+      <div class="card"><h3>🔥 Heat‑Resistant</h3><p>Stays solid in hot weather, won’t go mushy in the sun.</p></div>
+      <div class="card"><h3>🧲 Confident Grip</h3><p>High‑tack blend for stable rides and clean tricks.</p></div>
+    </div>
   </section>
 
-  <section>
-    <h2>Wax Details</h2>
-    <p>Each bar of NoFade Wax weighs <strong>around 80g</strong> and costs just <strong>45 AED</strong>. It's sealed in waterproof packaging and tested weekly at Wild Wadi, Dubai.</p>
+  <!-- Product / Shop CTA -->
+  <section id="shop" class="wrap">
+    <div class="product">
+      <div>
+        <h2>NoFade Wax – Classic Bar</h2>
+        <p class="muted">Our flagship, color‑safe formula. Perfect for FlowRider and warm‑to‑hot conditions.</p>
+        <ul>
+          <li>Strong grip without chalky residue</li>
+          <li>Balanced hardness for Dubai temps</li>
+          <li>Light lemon scent</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn secondary" href="mailto:rohamfallah461212@gmail.com?subject=NoFade%20Wax%20Order">Order by Email</a>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="https://rohamfallah.github.io/nofade-wax/logo.png" alt="NoFade bar" style="max-width:340px;margin-inline:auto">
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>How to Order</h2>
-    <p>📧 Email: <a href="mailto:rohamfallah461212@gmail.com">rohamfallah461212@gmail.com</a></p>
-    <p>Or message us directly on WhatsApp by clicking below:</p>
-    <a class="button" href="https://wa.me/971502677438?text=Hi%2C%20I%20would%20like%20to%20order%20NoFade%20Wax">Order on WhatsApp</a>
+  <!-- Story -->
+  <section class="wrap">
+    <h2>Our Story</h2>
+    <p class="muted">NoFade started when Roham, a FlowRider regular in Dubai, got tired of wax that turned boards white. We experimented with heat‑resistant natural waxes and color‑safe additives until the grip was perfect and the colors stayed true. Every batch is hand‑poured and tested by riders.</p>
   </section>
 
-  <section>
-    <h2>Register</h2>
-    <p>To register, just message us on WhatsApp with your:</p>
-    <ul>
-      <li>✔️ Name</li>
-      <li>✔️ Email</li>
-      <li>✔️ Board Type (Decking, Slick, or Combo)</li>
-    </ul>
-    <a class="button" href="https://wa.me/971502677438?text=Hi%2C%20I%20want%20to%20register%20for%20NoFade%20Wax.%20Here%20are%20my%20details%3A">Register on WhatsApp</a>
-  </section>
-
+  <!-- Contact -->
   <footer>
-    &copy; 2025 NoFade Wax. Built in Dubai. All rights reserved.<br>
-    Contact us at <a href="mailto:rohamfallah461212@gmail.com">rohamfallah461212@gmail.com</a> or DM us on TikTok @nofadewax<br><br>
-    <strong>Refund Policy:</strong> All sales are final. If there is an issue with your product, please contact us by email within 3 days of receiving your wax. We’ll do our best to help!
+    <div class="wrap footer-grid">
+      <div>
+        <h3 style="margin:0 0 8px">Contact</h3>
+        <p style="margin:0 0 6px">Email: <a href="mailto:rohamfallah461212@gmail.com">rohamfallah461212@gmail.com</a></p>
+        <p style="margin:0 0 6px">WhatsApp: <a href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" target="_blank" rel="noopener">+971 50 267 7438</a></p>
+        <p style="margin:0 0 6px">TikTok: <strong>@NoFadeWax</strong> &nbsp;|&nbsp; Discord: <strong>@nofadewax</strong></p>
+        <p class="muted" style="margin-top:12px">© 2025 NoFade Wax. All rights reserved.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 8px">Quick Order</h3>
+        <a class="btn" href="https://api.whatsapp.com/send?phone=971502677438&text=Hi%2C%20I%20want%20to%20order%20NoFade%20Wax" target="_blank" rel="noopener">Message on WhatsApp</a>
+        <p class="muted" style="margin:10px 0 6px">Scan to visit the website:</p>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Frohamfallah.github.io%2Fnofadewax-%2F&size=200x200" alt="QR code to website">
+      </div>
+    </div>
   </footer>
-
 </body>
 </html>
-
-
