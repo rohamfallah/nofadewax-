@@ -8,11 +8,11 @@
   <meta name="theme-color" content="#0ea5e9" />
   <style>
     :root {
-      --brand:#0ea5e9;
-      --brand-dark:#0369a1;
-      --ink:#0f172a;
-      --muted:#64748b;
-      --bg:#f8fafc;
+      --brand:#0ea5e9;        /* sky-500 */
+      --brand-dark:#0369a1;   /* sky-700 */
+      --ink:#0f172a;          /* slate-900 */
+      --muted:#64748b;        /* slate-500 */
+      --bg:#f8fafc;           /* slate-50 */
       --card:#ffffff;
       --ring:rgba(14,165,233,.25);
       --radius:18px;
@@ -24,12 +24,19 @@
     img{max-width:100%;display:block}
     .wrap{max-width:1100px;margin-inline:auto;padding:24px}
 
-    header{position:sticky;top:0;z-index:30;backdrop-filter:saturate(180%) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid rgba(2,6,23,.06)}
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(255,255,255,.8);
+      border-bottom:1px solid rgba(2,6,23,.06);
+    }
     .nav{display:flex;align-items:center;gap:18px;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
     .brand img{width:44px;height:44px;border-radius:12px;object-fit:contain}
     .nav a.btn{padding:10px 16px;border-radius:999px;background:var(--brand);color:white;text-decoration:none;box-shadow:var(--shadow)}
 
+    /* Hero */
     .hero{isolation:isolate;position:relative;overflow:hidden;border-radius:0 0 var(--radius) var(--radius);}
     .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:56px 24px}
     .hero h1{font-size:clamp(28px,4.5vw,48px);line-height:1.05;margin:0 0 10px}
@@ -43,30 +50,36 @@
                  radial-gradient(40% 40% at 70% 60%, rgba(2,132,199,.35), transparent 60%);
       filter:blur(30px);opacity:.7;pointer-events:none}
 
+    /* Sections */
     section{padding:40px 24px}
     h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 8px}
     .muted{color:var(--muted)}
 
+    /* Cards */
     .grid{display:grid;gap:18px}
     @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
     .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border:1px solid rgba(2,6,23,.06)}
     .card h3{margin:6px 0 6px;font-size:18px}
     .card p{margin:0;color:var(--muted)}
 
+    /* Product */
     .product{display:grid;gap:22px;grid-template-columns:1fr}
     @media(min-width:860px){.product{grid-template-columns:1.2fr .8fr;align-items:center}}
     .product .shot{background:linear-gradient(135deg,#e6f6ff,#ffffff);border-radius:var(--radius);padding:18px;border:1px solid rgba(2,6,23,.06)}
     .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;background:#e0f2fe;color:#075985;border-radius:999px;font-weight:700;font-size:14px}
 
-    footer{background:#0b1220;color:#cbd5e1;margin-top:40px;text-align:center;padding-bottom:30px}
+    /* Footer */
+    footer{background:#0b1220;color:#cbd5e1;margin-top:40px}
     footer a{color:#e0f2fe}
     .footer-grid{display:grid;gap:22px;grid-template-columns:1fr}
     @media(min-width:720px){.footer-grid{grid-template-columns:1.3fr .7fr}}
 
-    .qr{width:120px;height:120px;border-radius:12px;border:1px solid rgba(2,6,23,.06);margin-inline:auto}
+    /* Utilities */
+    .qr{width:120px;height:120px;border-radius:12px;border:1px solid rgba(2,6,23,.06);}
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="wrap nav">
       <div class="brand">
@@ -83,6 +96,7 @@
     </div>
   </header>
 
+  <!-- Hero -->
   <div class="hero" style="background:linear-gradient(180deg,#0ea5e9,#0284c7);color:#fff">
     <div class="wrap hero-inner">
       <div>
@@ -101,6 +115,7 @@
     <div class="bubble"></div>
   </div>
 
+  <!-- Why NoFade -->
   <section id="learn" class="wrap">
     <h2>Why riders choose NoFade</h2>
     <p class="muted">Built to grip hard and keep your deck color bright — even in Dubai heat.</p>
@@ -111,6 +126,7 @@
     </div>
   </section>
 
+  <!-- Product / Shop CTA -->
   <section id="shop" class="wrap">
     <div class="product">
       <div>
@@ -132,11 +148,13 @@
     </div>
   </section>
 
+  <!-- Story -->
   <section class="wrap">
     <h2>Our Story</h2>
     <p class="muted">NoFade started when Roham, a FlowRider regular in Dubai, got tired of wax that turned boards white. We experimented with heat‑resistant natural waxes and color‑safe additives until the grip was perfect and the colors stayed true. Every batch is hand‑poured and tested by riders.</p>
   </section>
 
+  <!-- Contact -->
   <footer>
     <div class="wrap footer-grid">
       <div>
@@ -153,11 +171,7 @@
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Frohamfallah.github.io%2Fnofadewax-%2F&size=200x200" alt="QR code to website">
       </div>
     </div>
-    <div style="margin-top:30px">
-      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Frohamfallah.github.io%2Fnofadewax-%2F&size=200x200" alt="QR code to website bottom">
-    </div>
   </footer>
 </body>
 </html>
-
 
